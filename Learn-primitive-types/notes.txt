@@ -1,0 +1,32 @@
+1/ INTRO
+
+- TypeScript is an open-source language which is builds on JavaScripts
+
+- Why is it considered as a super set of JavaScripts? It takes JS and add more features to it, meaning existing JS programs are also valid TS programs
+
+- Developed and maintained by Microsoft
+
+- Attributes
+  + Validate if your code is woring properly
+  + Writing Types is Optional
+  + Client and Sever-side development
+  + Transcompile to JavaScripts
+  ! Browsers cannot compile TS 
+
+- Pros: help code to have less errors, to be cleaner and more readable; it is optional, both sides development, no need for pseudocode
+
+- The only con like SASS: needs to be compiled to JavaScript
+
+2/ JS TYPES
+// Primitives:
+- Boolean : typeof instance === "boolean"
+- Number : typeof instance === "number"
+- String : typeof instance === "string"
+- BigInt : typeof instance === "bigint"
+- Symbol : typeof instance === "symbol"
+- undefined : typeof instance === "undefined" 
+- Structural Types:
+- Object : typeof instance === "object"
+- Function : typeof instance === "function" 
+- Structural Root Primitive:
+- null : typeof instance === "object"
