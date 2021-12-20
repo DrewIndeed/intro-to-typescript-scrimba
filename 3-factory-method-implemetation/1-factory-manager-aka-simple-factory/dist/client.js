@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const product_type_enum_1 = require("./product_type.enum");
+const product_manager_1 = require("./product_manager");
+const productManager = new product_manager_1.ProductManager();
+const burger = productManager.createProduct(product_type_enum_1.PRODUCT_TYPE.BURGER);
+const pizza = productManager.createProduct(product_type_enum_1.PRODUCT_TYPE.PIZZA);
+const kebab = productManager.createProduct(product_type_enum_1.PRODUCT_TYPE.KEBAB);
+console.log(burger.operation());
+console.log(pizza.operation());
+console.log(kebab.operation());
