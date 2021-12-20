@@ -166,3 +166,34 @@ const emp1 = new Employee(3, "Anderson", "Developer");
 console.log(emp1.name);
 console.log(emp1.position);
 console.log(emp1.register());
+
+// Generics
+// Without generics
+function generateArray1(items: any[]): any[] {
+  return new Array().concat(items);
+}
+// usage
+let numArr1 = generateArray1([1, 2, 3, 4]);
+let strArr1 = generateArray1([
+  "Andrew",
+  "Anderson",
+  "Sadio Mane",
+  "Mohamed Salah",
+]);
+numArr1.push("Nikola"); // no error because of type 'any'
+console.log(numArr1);
+
+// With generics
+function generateArray2<T>(items: T[]): T[] {
+  return new Array().concat(items);
+}
+let numArr2 = generateArray2<number>([1, 2, 3, 4]);
+let strArr2 = generateArray2<string>([
+  "Andrew",
+  "Anderson",
+  "Sadio Mane",
+  "Mohamed Salah",
+]);
+// numArr2.push("Nikola"); // will give error because of type 'number'
+numArr2.push(6868); // no error because the input is of number type
+console.log(numArr2);
