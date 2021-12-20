@@ -131,3 +131,38 @@ let john = new Person(1, "John");
 let bob = new Person(2, "Bob");
 console.log(john, bob);
 console.log(john.register());
+
+// Classes with interface implementation
+interface PersonInteface {
+  id: number;
+  name: string;
+  register(): number;
+}
+
+class Person2 implements PersonInteface {
+  id: number;
+  name: string;
+
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  register() {
+    return 200; // if this were a String -> error
+  }
+}
+
+class Employee extends Person2 {
+  position: string;
+
+  constructor(id: number, name: string, position: string) {
+    super(id, name);
+    this.position = position;
+  }
+}
+// usage
+const emp1 = new Employee(3, "Anderson", "Developer");
+console.log(emp1.name);
+console.log(emp1.position);
+console.log(emp1.register());

@@ -90,7 +90,28 @@ class Person {
         return `${this.name} has registered`;
     }
 }
+// class usage
 let john = new Person(1, "John");
 let bob = new Person(2, "Bob");
 console.log(john, bob);
 console.log(john.register());
+class Person2 {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return 200; // if this were a String -> error
+    }
+}
+class Employee extends Person2 {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+// usage
+const emp1 = new Employee(3, "Anderson", "Developer");
+console.log(emp1.name);
+console.log(emp1.position);
+console.log(emp1.register());
