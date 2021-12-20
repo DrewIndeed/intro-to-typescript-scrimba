@@ -1,3 +1,6 @@
+SOURCE 1: https://scrimba.com/learn/typescript
+SOURCE 2: https://www.youtube.com/watch?v=BCg4U1FzODs
+
 1/ INTRO
 
 - TypeScript is an open-source language which is builds on JavaScripts
