@@ -96,7 +96,7 @@ function log(msg: string | number) {
 interface UserInterface {
   id: number;
   name: string;
-};
+}
 
 const user3: UserInterface = {
   id: 22,
@@ -105,7 +105,29 @@ const user3: UserInterface = {
 
 // Interface functions
 interface MathFunc {
-  (x: number, y: number): number
+  (x: number, y: number): number;
 }
-const addFunc = (x: number, y: number): number => x + y
-const subFunc = (x: number, y: number): number => x - y
+const addFunc = (x: number, y: number): number => x + y;
+const subFunc = (x: number, y: number): number => x - y;
+
+// Classes
+class Person {
+  id: number;
+  name: string;
+
+  // constructor is a MUST
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+
+  // another method
+  register() {
+    return `${this.name} has registered`;
+  }
+}
+// class usage
+let john = new Person(1, "John");
+let bob = new Person(2, "Bob");
+console.log(john, bob);
+console.log(john.register());

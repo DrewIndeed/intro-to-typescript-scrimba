@@ -46,3 +46,8 @@ SOURCE 2: https://www.youtube.com/watch?v=BCg4U1FzODs
 5/ 'readonly' 
 - Make an attribute in an interface to be read-only (CANNOT MOFIFIDED)
 - Example: interface i {readonly name: string, age?: number}
+
+6/ Class modifiders
+- Default (without writing anything before attribute) is 'public'
+- 'protected': can only access that extends further the current class
+- 'private': can only access in the current class

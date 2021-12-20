@@ -1,24 +1,23 @@
-"use strict";
 // Basics
-let age = 22; // try to change type to string -> give error
-let firstName = "Andrew"; // try to change type to number -> give error
-let isCoupled = true;
-let x = "Chocolate box";
+var age = 22; // try to change type to string -> give error
+var firstName = "Andrew"; // try to change type to number -> give error
+var isCoupled = true;
+var x = "Chocolate box";
 // Array with a particular type: type + []
-let array1 = [1, 2, 3, 4, 5];
+var array1 = [1, 2, 3, 4, 5];
 // array1.push("Andrew") -> error
 // Array with any types
-let array2 = [1, true, "Andrew"];
+var array2 = [1, true, "Andrew"];
 // Tuple
-let person = [22, "Andrew", true];
+var person = [22, "Andrew", true];
 // Tuple Array
-let employee = [
+var employee = [
     [1, "Anderson"],
     [2, "Andrew"],
     [3, "Andrea"],
 ];
 // Union
-let uid;
+var uid;
 uid = 22;
 uid = "Olalala";
 // Enum
@@ -47,20 +46,20 @@ console.log(Direction1.up); // 0
 console.log(Direction2.up); // 1
 console.log(Direction3.up); // up
 // Objects with inline type declaration
-const user1 = {
+var user1 = {
     id: 22,
-    name: "John",
+    name: "John"
 };
-const user2 = {
+var user2 = {
     id: 22,
-    name: "John",
+    name: "John"
 };
 // Types Assertion (kinda like casting)
-let cid = 1;
+var cid = 1;
 // Way 1
-let customerId = cid;
+var customerId = cid;
 // Way 2
-let studentId = cid;
+var studentId = cid;
 // Functions
 // 1/ without declaring types for params -> errors
 // to disable that: to config file -> uncomment noImplicitAny: "true"
@@ -72,25 +71,27 @@ function add(x, y) {
 function log(msg) {
     console.log(msg);
 }
-const user3 = {
+var user3 = {
     id: 22,
-    name: "John",
+    name: "John"
 };
-const addFunc = (x, y) => x + y;
-const subFunc = (x, y) => x - y;
+var addFunc = function (x, y) { return x + y; };
+var subFunc = function (x, y) { return x - y; };
 // Classes
-class Person {
+var Person = /** @class */ (function () {
     // constructor is a MUST
-    constructor(id, name) {
+    function Person(id, name) {
         this.id = id;
         this.name = name;
     }
     // another method
-    register() {
-        return `${this.name} has registered`;
-    }
-}
-let john = new Person(1, "John");
-let bob = new Person(2, "Bob");
+    Person.prototype.register = function () {
+        return "".concat(this.name, " has registered");
+    };
+    return Person;
+}());
+// class usage
+var john = new Person(1, "John");
+var bob = new Person(2, "Bob");
 console.log(john, bob);
 console.log(john.register());
