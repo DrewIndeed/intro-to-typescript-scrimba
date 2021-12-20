@@ -91,3 +91,21 @@ function add(x: number, y: number): number {
 function log(msg: string | number) {
   console.log(msg);
 }
+
+// Interfaces
+interface UserInterface {
+  id: number;
+  name: string;
+};
+
+const user3: UserInterface = {
+  id: 22,
+  name: "John",
+};
+
+// Interface functions
+interface MathFunc {
+  (x: number, y: number): number
+}
+const addFunc = (x: number, y: number): number => x + y
+const subFunc = (x: number, y: number): number => x - y

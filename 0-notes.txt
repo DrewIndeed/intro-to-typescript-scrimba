@@ -33,3 +33,16 @@ SOURCE 2: https://www.youtube.com/watch?v=BCg4U1FzODs
 - Function : typeof instance === "function" 
 - Structural Root Primitive:
 - null : typeof instance === "object"
+
+3/ 'interface' vs. 'type'
+- You cannot use 'interface' for Primitive types, that's it :)
+- Example: interface Point = number | string -> error
+
+4/ The '?' symbol
+- So for interfaces, we have to implement all the attributes that it has, otherwise errors
+- To set an attribute as OPTIONAL, just put a '?' next to it
+- Example: interface i {name: string, age?: number} -> we do not HAVE TO init 'age' at usage
+
+5/ 'readonly' 
+- Make an attribute in an interface to be read-only (CANNOT MOFIFIDED)
+- Example: interface i {readonly name: string, age?: number}
