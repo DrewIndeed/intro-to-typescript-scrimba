@@ -7,6 +7,6 @@ export class OrcArmor implements Armor {
   }
 
   useArmorWithWeapon(weapon: Weapon): string {
-    return `Super Orc Armor with ${weapon}`;
+    return `Super Orc Armor with ${weapon.useWeapon()}`;
   }
 }

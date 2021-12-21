@@ -7,6 +7,6 @@ export class BodyArmor implements Armor {
   }
 
   useArmorWithWeapon(weapon: Weapon): string {
-    return `Super Bodu Armor with ${weapon}`;
+    return `Super Bodu Armor with ${weapon.useWeapon()}`;
   }
 }

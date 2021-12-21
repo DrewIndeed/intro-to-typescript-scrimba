@@ -7,6 +7,6 @@ export class Cloak implements Armor {
   }
 
   useArmorWithWeapon(weapon: Weapon): string {
-    return `Super Cloak with ${weapon}`;
+    return `Super Cloak with ${weapon.useWeapon()}`;
   }
 }
