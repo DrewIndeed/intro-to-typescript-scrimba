@@ -67,3 +67,9 @@ SOURCE 3: https://refactoring.guru/design-patterns (FOLDERS THAT ARE RELATED TO 
 
 --------------------------------------------------------------------------------------------------------------------------------
 (CONTINUE LEARNING FROM SOURCE 1)
+7/ Learn primitive types - Type assignment and Type interference
+- let age                 -> TS says age is any type
+- let age = 23            -> TS says age is number type
+- const age = 23          -> TS says age is 23, constant that's it
+- const age: number = 23  -> This is REDUNDANT, because TS already knows age is number type -> TYPE INTERFERENCE (meaning knowing that type of that variables' values)
+  + So when should we do this? When a variable is not assinged to anything: let isLoyal, thats it. isLoyal now will have the type of any, so we need to ASSIGN TYPE FOR IT.
