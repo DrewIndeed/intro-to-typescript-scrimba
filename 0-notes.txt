@@ -49,8 +49,7 @@ SOURCE 3: https://refactoring.guru/design-patterns (FOLDERS THAT ARE RELATED TO 
 - null : typeof instance === "object"
 
 3/ 'interface' vs. 'type'
-- You cannot use 'interface' for Primitive types, that's it :)
-- Example: interface Point = number | string -> error 
+- Read this for more details: https://stackoverflow.com/questions/37233735/interfaces-vs-types-in-typescript
 
 4/ The '?' symbol
 - So for interfaces, we have to implement all the attributes that it has, otherwise errors
@@ -61,7 +60,7 @@ SOURCE 3: https://refactoring.guru/design-patterns (FOLDERS THAT ARE RELATED TO 
 - Make an attribute in an interface to be read-only (CANNOT MOFIFIDED)
 - Example: interface i {readonly name: string, age?: number}
 
-6/ Class modifiders
+6/ Class attributes modifiders
 - Default (without writing anything before attribute) is 'public'
 - 'protected': can only access that extends further the current class
 - 'private': can only access in the current class
