@@ -153,11 +153,12 @@ class Person2 implements PersonInteface {
   }
 }
 
+// Class extension
 class Employee extends Person2 {
   position: string;
 
   constructor(id: number, name: string, position: string) {
-    super(id, name);
+    super(id, name); // must calledthe super constructor
     this.position = position;
   }
 }

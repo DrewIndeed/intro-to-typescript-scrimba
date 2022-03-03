@@ -1,5 +1,17 @@
 SOURCE 1: https://scrimba.com/learn/typescript
 SOURCE 2: https://www.youtube.com/watch?v=BCg4U1FzODs
+SOURCE 3: https://refactoring.guru/design-patterns (FOLDERS THAT ARE RELATED TO DESIGN PATTERS ARE FROM THIS SOURCE)
+
+0/ HOW TO COMPILE TYPESCRIPT AND RUN (from source 2)
+
+- For this repo ONLY, that i installed TS globally through npm i -g typescript
+
+- Before having a config file for TS, you can just 'tsc [filename_here]' and a .js file with the same name will be created in the same level of directory
+
+- Now, we want to separate TS and JS files in different folder, we can specify the route for those file in a TS config file
+- To create a new TS config file, 'tsc --init'. Then, create 2 new folder, 1 called src and 1 called dist
+- In config file, "outDir": "./dist" and "rootDir": "./src"
+- To compile, just 'tsc' in the terminal and it will follow what has been specified in the config file
 
 1/ INTRO
 
@@ -10,7 +22,7 @@ SOURCE 2: https://www.youtube.com/watch?v=BCg4U1FzODs
 - Developed and maintained by Microsoft
 
 - Attributes
-  + Validate if your code is woring properly
+  + Validate if your code is working properly
   + Writing Types is Optional
   + Client and Sever-side development
   + Transcompile to JavaScripts
@@ -28,15 +40,17 @@ SOURCE 2: https://www.youtube.com/watch?v=BCg4U1FzODs
 - BigInt : typeof instance === "bigint"
 - Symbol : typeof instance === "symbol"
 - undefined : typeof instance === "undefined" 
-- Structural Types:
+
+// Structural Types:
 - Object : typeof instance === "object"
 - Function : typeof instance === "function" 
-- Structural Root Primitive:
+
+// Structural Root Primitive:
 - null : typeof instance === "object"
 
 3/ 'interface' vs. 'type'
 - You cannot use 'interface' for Primitive types, that's it :)
-- Example: interface Point = number | string -> error
+- Example: interface Point = number | string -> error 
 
 4/ The '?' symbol
 - So for interfaces, we have to implement all the attributes that it has, otherwise errors
@@ -51,3 +65,6 @@ SOURCE 2: https://www.youtube.com/watch?v=BCg4U1FzODs
 - Default (without writing anything before attribute) is 'public'
 - 'protected': can only access that extends further the current class
 - 'private': can only access in the current class
+
+--------------------------------------------------------------------------------------------------------------------------------
+(CONTINUE LEARNING FROM SOURCE 1)
