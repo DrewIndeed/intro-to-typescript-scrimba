@@ -73,3 +73,74 @@ SOURCE 3: https://refactoring.guru/design-patterns (FOLDERS THAT ARE RELATED TO 
 - const age = 23          -> TS says age is 23, constant that's it
 - const age: number = 23  -> This is REDUNDANT, because TS already knows age is number type -> TYPE INTERFERENCE (meaning knowing that type of that variables' values)
   + So when should we do this? When a variable is not assinged to anything: let isLoyal, thats it. isLoyal now will have the type of any, so we need to ASSIGN TYPE FOR IT.
+
+(LEARNING STRUCTURAL TYPES)
+8/ Objects
+
+--- Type interference with objects ---
+const you = {
+  userName: 'Bobby',
+  isReturning: true,
+}
+
+- Above: TS knows that it has the object type implicitly
+- If we want to imply explicitly:
+const you: object = {
+  userName: 'Bobby',
+  isReturning: true,
+} 
+
+OR
+
+const you: object = {
+  userName: 'Bobby',
+  isReturning: true,
+} 
+
+- But it would mean nothing since TS already knows that. Also, when we try to access one of the attributes of the object
+  for example: you.userName, it will still give error because we dont tell TS anything about the object,
+  we have to be more specific. If we get rid of ': object', no error but it is still meaningless than
+
+- So, we need to:
+
+const you: {
+  userName : string;
+  isReturning: boolean
+} = {
+  userName: 'Bobby',
+  isReturning: true,
+}
+
+- If we console.log(you.userName), works fine. 
+
+- If we: 
+const you: {
+  userName : string;
+  isReturning: boolean
+} = {
+  userName: 'Bobby',
+  isReturning: true,
+  age: 23 // THIS WILL GIVE ERROR
+}
+- Fixing by: 
+const you: {
+  userName : string;
+  isReturning: boolean;
+  age: number
+} = {
+  userName: 'Bobby',
+  isReturning: true,
+  age: 23 // THIS WILL GIVE ERROR
+}
+
+--- You can also set the objects attribute to constants also ---
+const you: {
+  userName : 'Andrew'; // IT MUST BE 'Andrew'
+  isReturning: boolean;
+  age: number
+} = {
+  userName: 'Bobby', // THIS WILL GIVE ERROR
+  isReturning: true,
+  age: 23 // THIS WILL GIVE ERROR
+}
+
